@@ -1,9 +1,10 @@
+package com.qa.garage;
 
 public class Vehicle {
-	String color;
-	int mpgCity;
-	int mpgHighway;
-	double fuelTankCapacity;
+	private String color;
+	private int mpgCity;
+	private int mpgHighway;
+	private double fuelTankCapacity;
 	
 	Vehicle(String c, int mpgC, int mpgH, double ftc) {
 		this.color = c;
@@ -12,3 +13,5 @@ public class Vehicle {
 		this.fuelTankCapacity = ftc;
 	}
 }
+
+
