@@ -9,5 +9,6 @@ public class Car extends Vehicle {
 		super(c, mpgC, mpgH, ftc);
 		seats = numOfSeats;
 	}
+	
 }
 		
