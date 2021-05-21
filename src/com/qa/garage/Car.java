@@ -1,15 +1,16 @@
 package com.qa.garage;
 
 public class Car extends Vehicle {
-	
+
 	// field from Car class
 	int seats;
 	double retailPrice;
 
-	Car(int numOfSeats, double totalPrice, String c, int mpgC, int mpgH, double ftc) {
-		super(c, mpgC, mpgH, ftc);
+	Car(String name, int numOfSeats, double totalPrice, String c, int mpgC, int mpgH, double ftc) {
+		super(name, c, mpgC, mpgH, ftc);
 		seats = numOfSeats;
 		retailPrice = totalPrice;
+		this.id = 0;
 	}
 
 	public int getSeats() {
@@ -35,6 +36,8 @@ public class Car extends Vehicle {
 		return retailPrice + price;
 		
 	}
+	
+	
 	
 }
 		

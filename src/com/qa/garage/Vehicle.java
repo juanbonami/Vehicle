@@ -1,14 +1,17 @@
 package com.qa.garage;
 
 public class Vehicle {
+	
+	protected int id;
+	String vehicleType;
 	protected double salesTax = 0.0625;
 	private String color;
 	private int mpgCity;
 	private int mpgHighway;
 	private double fuelTankCapacity;
 	
-	Vehicle( String c, int mpgC, int mpgH, double ftc) {
-//		this.salesTax = st;
+	Vehicle(String name, String c, int mpgC, int mpgH, double ftc) {
+		this.vehicleType = name;
 		this.color = c;
 		this.mpgCity = mpgC;
 		this.mpgHighway = mpgH;
@@ -54,6 +57,24 @@ public class Vehicle {
 	public void setFuelTankCapacity(double fuelTankCapacity) {
 		this.fuelTankCapacity = fuelTankCapacity;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getVehicleType() {
+		return vehicleType;
+	}
+
+	public void setVehicleType(String vehicleType) {
+		this.vehicleType = vehicleType;
+	}
+	
+	
 
 	
 }

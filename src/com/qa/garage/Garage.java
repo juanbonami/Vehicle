@@ -1,27 +1,30 @@
 package com.qa.garage;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Garage {
-	public static void main(String[] args) {
+	
+
+//		Car c = new Car("honda", 4, 16000 , "red", 22, 25, 50.4);
+//		Motorcycle m = new Motorcycle("ducati", 120, 10500, "green", 23, 27, 30.3);
+//		Rv r = new Rv("Entegra", true, 32200, "grey", 18, 25, 60.1);
 		
-		Car c = new Car(4, 16000 , "red", 22, 25, 50.4);
-		Motorcycle m = new Motorcycle(120, 10500, "green", 23, 27, 30.3);
-		Rv r = new Rv(true, 32200, "grey", 18, 25, 60.1);
+		List<Vehicle> g = new ArrayList<Vehicle>(Arrays.asList(
+				new Car("honda", 4, 16000 , "red", 22, 25, 50.4),
+				new Motorcycle("ducati", 120, 10500, "green", 23, 27, 30.3),
+				new Rv("Entegra", true, 32200, "grey", 18, 25, 60.1)));
 		
-		
-		
-		addVehicle(c);
-		addVehicle(m);
-		addVehicle(r);
-		
-		bill(garage);
-		
-	}
+
+	
+	
 	
 	// garage 
-	static List<Vehicle> garage = new ArrayList<>();
+	//static List<Vehicle> garage = new ArrayList<Vehicle>(Arrays.asList());
+	
+	
+	
 	
 	// returns price after tax
 	static void bill(List<Vehicle> vehicle) {
@@ -30,20 +33,49 @@ public class Garage {
 		}
 	}
 	
-	
-	
-	// adds an instance of a Vehicle to the List (Garage)
-	static List<Vehicle> addVehicle(Vehicle v) {
-		 garage.add(v);
-		return garage;
+	public void addId(int id) {
+		for (Vehicle v : g) {
+			if (id == v.id) {
+				g.add(v);
+			}
+		}
 	}
 	
 	
-	// deletes Vehicle
-	static List<Vehicle> deleteVehicle(Vehicle v) {
-		garage.remove(v);
-		return garage;
+	public void addType(String s) {
+	for (Vehicle v : g) {
+		if (s == v.getVehicleType()) {
+			g.add(v);
+			}
+		}
 	}
+	
+	
+	
+	 public void deleteId(int id) {
+		 for (Vehicle v : g) {
+			if (id == v.id) {
+				g.remove(v);
+				}
+			}
+	 	}
+	 
+	 
+	 public void deleteType(String s) {
+		 for (Vehicle v : g) {
+				if (s == v.getVehicleType()) {
+					g.add(v);
+				}
+			}
+	 	}
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 }
 
 

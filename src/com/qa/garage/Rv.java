@@ -5,10 +5,11 @@ public class Rv extends Vehicle {
 	boolean hasToilet;
 	double retailPrice;
 
-	Rv(boolean toilet, double totalPrice, String c, int mpgC, int mpgH, double ftc) {
-		super(c, mpgC, mpgH, ftc);
+	Rv(String name, boolean toilet, double totalPrice, String c, int mpgC, int mpgH, double ftc) {
+		super(name, c, mpgC, mpgH, ftc);
 		hasToilet = toilet;
 		retailPrice = totalPrice;
+		this.id = 2;
 	}
 
 	public boolean isHasToilet() {

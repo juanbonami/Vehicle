@@ -5,10 +5,11 @@ public class Motorcycle extends Vehicle {
 	int topSpeed;
 	double retailPrice;
 	
-	Motorcycle(int speed, double totalPrice, String c, int mpgC, int mpgH, double ftc) {
-		super(c, mpgC, mpgH, ftc);
+	Motorcycle(String name, int speed, double totalPrice, String c, int mpgC, int mpgH, double ftc) {
+		super(name, c, mpgC, mpgH, ftc);
 		topSpeed = speed;
 		retailPrice = totalPrice;
+		this.id = 1;
 	}
 
 	public int getTopSpeed() {
