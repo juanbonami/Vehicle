@@ -5,24 +5,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Garage {
-	
-
-//		Car c = new Car("honda", 4, 16000 , "red", 22, 25, 50.4);
-//		Motorcycle m = new Motorcycle("ducati", 120, 10500, "green", 23, 27, 30.3);
-//		Rv r = new Rv("Entegra", true, 32200, "grey", 18, 25, 60.1);
 		
-		List<Vehicle> g = new ArrayList<Vehicle>(Arrays.asList(
+		 static List<Vehicle> g = new ArrayList<Vehicle>(Arrays.asList(
 				new Car("honda", 4, 16000 , "red", 22, 25, 50.4),
 				new Motorcycle("ducati", 120, 10500, "green", 23, 27, 30.3),
 				new Rv("Entegra", true, 32200, "grey", 18, 25, 60.1)));
-		
-
-	
-	
-	
-	// garage 
-	//static List<Vehicle> garage = new ArrayList<Vehicle>(Arrays.asList());
-	
+		 
+		 static List<Vehicle> garage = new ArrayList<Vehicle>(g);
 	
 	
 	
@@ -33,16 +22,18 @@ public class Garage {
 		}
 	}
 	
-	public void addId(int id) {
+	// adds by id
+	public static void addId(int id) {
 		for (Vehicle v : g) {
 			if (id == v.id) {
-				g.add(v);
+				garage.add(v);
+				System.out.println(garage);
 			}
 		}
 	}
 	
-	
-	public void addType(String s) {
+	// adds by type
+	public static void addType(String s) {
 	for (Vehicle v : g) {
 		if (s == v.getVehicleType()) {
 			g.add(v);
@@ -51,8 +42,8 @@ public class Garage {
 	}
 	
 	
-	
-	 public void deleteId(int id) {
+	// deletes by id
+	 public static void deleteId(int id) {
 		 for (Vehicle v : g) {
 			if (id == v.id) {
 				g.remove(v);
@@ -60,19 +51,14 @@ public class Garage {
 			}
 	 	}
 	 
-	 
-	 public void deleteType(String s) {
+	 // deletes by type
+	 public static void deleteType(String s) {
 		 for (Vehicle v : g) {
 				if (s == v.getVehicleType()) {
 					g.add(v);
 				}
 			}
 	 	}
-	 
-	 
-	 
-	 
-	 
 	 
 	 
 	 
