@@ -5,9 +5,10 @@ public class Rv extends Vehicle {
 	boolean hasToilet;
 	double retailPrice;
 
-	Rv(boolean toilet ,String c, int mpgC, int mpgH, double ftc) {
+	Rv(boolean toilet, double totalPrice, String c, int mpgC, int mpgH, double ftc) {
 		super(c, mpgC, mpgH, ftc);
 		hasToilet = toilet;
+		retailPrice = totalPrice;
 	}
 
 	public boolean isHasToilet() {
@@ -26,6 +27,13 @@ public class Rv extends Vehicle {
 		this.retailPrice = retailPrice;
 	}
 	
+	@Override
+	public double getSalesTax() {
+		double price;
+		price = salesTax * retailPrice;
+		return retailPrice + price;
+		
+	}
 	
-
+	
 }

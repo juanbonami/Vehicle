@@ -1,13 +1,14 @@
 package com.qa.garage;
 
 public class Vehicle {
-	private double salesTax;
+	protected double salesTax = 0.0625;
 	private String color;
 	private int mpgCity;
 	private int mpgHighway;
 	private double fuelTankCapacity;
 	
-	Vehicle(String c, int mpgC, int mpgH, double ftc) {
+	Vehicle( String c, int mpgC, int mpgH, double ftc) {
+//		this.salesTax = st;
 		this.color = c;
 		this.mpgCity = mpgC;
 		this.mpgHighway = mpgH;

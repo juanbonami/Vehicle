@@ -6,10 +6,10 @@ public class Car extends Vehicle {
 	int seats;
 	double retailPrice;
 
-	Car(int numOfSeats, String c, int mpgC, int mpgH, double ftc) {
+	Car(int numOfSeats, double totalPrice, String c, int mpgC, int mpgH, double ftc) {
 		super(c, mpgC, mpgH, ftc);
 		seats = numOfSeats;
-		retailPrice = 1600.52;
+		retailPrice = totalPrice;
 	}
 
 	public int getSeats() {
@@ -28,7 +28,13 @@ public class Car extends Vehicle {
 		this.retailPrice = retailPrice;
 	}
 	
-	
+	@Override
+	public double getSalesTax() {
+		double price;
+		price = salesTax * retailPrice;
+		return retailPrice + price;
+		
+	}
 	
 }
 		

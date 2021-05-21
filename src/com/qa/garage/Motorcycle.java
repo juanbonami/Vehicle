@@ -5,9 +5,10 @@ public class Motorcycle extends Vehicle {
 	int topSpeed;
 	double retailPrice;
 	
-	Motorcycle(int speed, String c, int mpgC, int mpgH, double ftc) {
+	Motorcycle(int speed, double totalPrice, String c, int mpgC, int mpgH, double ftc) {
 		super(c, mpgC, mpgH, ftc);
 		topSpeed = speed;
+		retailPrice = totalPrice;
 	}
 
 	public int getTopSpeed() {
@@ -24,6 +25,14 @@ public class Motorcycle extends Vehicle {
 
 	public void setRetailPrice(double retailPrice) {
 		this.retailPrice = retailPrice;
+	}
+	
+	@Override
+	public double getSalesTax() {
+		double price;
+		price = salesTax * retailPrice;
+		return retailPrice + price;
+		
 	}
 	
 
